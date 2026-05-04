@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+  }
+
+  .back {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .back p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .back h5 {
+    font-size: 1.2rem;
+    color: #001d66;
+  }

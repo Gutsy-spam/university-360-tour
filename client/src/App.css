@@ -1,0 +1,313 @@
+/* Base styles for all screen sizes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.wrapper1 {
+  width: 90%; /* Default width for larger screens */
+  margin: auto; /* Default margin for larger screens */
+}
+
+.topscroll{
+  float: right;
+}
+
+.chatbot{
+  position: fixed;
+  top: 90%;
+  z-index: 99999;
+}
+
+.hamburg{
+  display: none;
+}
+
+/* For Chrome, Safari, and newer versions of Firefox */
+
+/* The scrollbar track */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* The scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #262626; /* Change this to the desired color */
+}
+
+/* The scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #001d66; /* Change this to the desired color */
+}
+
+.light-theme{
+  background-color: white;
+}
+
+.dark-theme{
+  background-color: #111d2c;
+}
+
+.dark-theme .wrapper{
+  background-color: #111d2c;
+}
+
+.dark-theme .abc{
+  background-color: #111d2c;
+}
+
+.dark-theme .bar{
+  background-color: whitesmoke;
+}
+
+.dark-theme .navbar-list-hamburg{
+  color: whitesmoke;
+}
+
+.dark-theme .hindi-name h1{
+  color: whitesmoke;
+}
+
+.dark-theme .hindi-name p{
+  color: whitesmoke;
+}
+
+.dark-theme .text{
+  color: whitesmoke;
+}
+
+.dark-theme .socialmedia a{
+  color: whitesmoke;
+}
+
+.dark-theme .themesbtn i{
+  background-color: whitesmoke;
+  color: black;
+} 
+
+.dark-theme .navbaricon a i{
+  background-color: whitesmoke;
+  color: whitesmoke;
+} 
+
+.dark-theme .location-container{
+  color: whitesmoke;
+}
+
+.dark-theme .location-container a{
+  color: whitesmoke;
+}
+
+.dark-theme .navbar{
+  background-color: #111d2c;
+}
+
+.dark-theme .navbar ul li {
+  color: whitesmoke;
+}
+
+.dark-theme .navbar-item1 li{
+  color: #e6f7ff;
+}
+
+.dark-theme .col ul li {
+  color: whitesmoke;
+}
+
+.dark-theme .container{
+  background-color: black;
+}
+
+.dark-theme .container ul{
+  background-color: black;
+}
+
+.dark-theme .container li {
+  background-color: black;
+}
+
+.dark-theme .updates1 h1{
+  color: whitesmoke;
+}
+
+.dark-theme .updates1 ul li a{
+  color: whitesmoke;
+}
+
+.dark-theme .twitter1{
+  background-color: #111d2c;
+}
+
+.dark-theme .cardbody2 button{
+  background-color: #111d2c;
+}
+
+.dark-theme .cardbody2 button:hover{
+  background-color: #bfbfbf;
+}
+
+.dark-theme .b{
+  background-color: #111d2c;
+}
+.dark-theme .main{
+  background-color: #111d2c;
+}
+.dark-theme .b h5 {
+  color: whitesmoke;
+}
+
+.dark-theme .b p{
+  color: whitesmoke;
+}
+
+.dark-theme .b h1{
+  color: whitesmoke;
+}
+
+.dark-theme .marquee-container{
+  background-color: black;
+}
+
+.dark-theme .flex-container{
+  background-color: #111d2c;
+}
+
+.dark-theme .flex-container i{
+  color: white;
+}
+
+.dark-theme .flex-container h3{
+  color: white;
+}
+
+.dark-theme .flex-container p{
+  color: white;
+}
+
+.dark-theme .flex-container .box{
+  box-shadow: 0px 2px 6px rgba(229, 231, 231, 0.4);
+}
+
+.dark-theme .academic-units{
+  background-color: #141414;
+}
+
+.dark-theme .four{
+  background-color: #111d2c;
+}
+
+.dark-theme .announcement-container{
+  background-color: #111d2c;
+}
+
+.dark-theme .announcement-container h1{
+  color: whitesmoke;
+}
+
+.dark-theme .timestamp{
+  color: #d87a16;
+}
+
+.dark-theme .announcement p{
+  color: #d9d9d9;
+}
+
+.dark-theme .event-calendar-container{
+  color: #d9d9d9;
+}
+
+.dark-theme .five{
+  background-color: #141414;
+}
+
+.dark-theme .five-one{
+  background-color: #111d2c;
+}
+
+.dark-theme .list-container h1{
+  color: whitesmoke;
+}
+
+.dark-theme .list-container .arrow1{
+  color: whitesmoke;
+}
+
+.dark-theme .item-card h2{
+  color: whitesmoke;
+}
+
+.dark-theme .item-card p{
+  color: whitesmoke;
+}
+
+.dark-theme .btR{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.dark-theme .gallery-heading{
+  color: whitesmoke;
+}
+
+.dark-theme .grid01{
+  background-color: black
+}
+
+.dark-theme .grid01 h1{
+  color: whitesmoke;
+}
+
+.dark-theme .box10{
+  background-color: black;
+}
+
+.dark-theme .box0{
+  background-color: #b7dcfa;
+  color: black;
+}
+
+.dark-theme .box0 p{
+  color: black;
+}
+
+.dark-theme .box0 h3 a{
+  color: #002766;
+}
+
+.dark-theme .seven{
+  background-color: #111d2c;
+}
+
+.dark-theme .upcoming-events-container{
+  color: whitesmoke;
+}
+
+.dark-theme .upcoming-events-container a{
+  color: whitesmoke;
+}
+
+.dark-theme .date{
+  color: #d87a16;
+}
+
+.dark-theme .events{
+  color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+

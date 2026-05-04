@@ -1,0 +1,38 @@
+.news-update-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .news-card {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  .news-card a {
+    text-decoration: none;
+  }
+  .news-card h3 {
+    font-weight: bold;
+  }
+  
+  .news-card p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .pagination span {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+  }
+  

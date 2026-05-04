@@ -1,0 +1,128 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.abc {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 16px;
+  color: #154c88;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid; /* Create a "typing" effect using a border */
+  animation: typing 7s steps(40) infinite, blink-caret 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.socialmedia {
+  position: absolute;
+  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.socialmedia ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.socialmedia ul li {
+  margin: 0 7px;
+}
+
+.socialmedia ul li a {
+  color: black;
+}
+
+.themesbtn {
+  margin-left: 63%;
+  margin-top: 0%;
+  position: absolute;
+  height: 1%;
+}
+
+.themesbtn i {
+  padding: 5px 5px;
+  font-size: 14px;
+  border: none;
+  background-color: black;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 1px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* Media query for mobile devices with a viewport width 372px */
+@media screen and (max-width: 425px) and (min-width:320px){
+  /* Add your mobile-specific styles here */
+  .abc {
+    width: auto;
+  }
+
+  .text {
+    font-size: 10px; 
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid; /* Create a "typing" effect using a border */
+    animation: typing 7s steps(40) infinite, blink-caret 0.8s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
+  .socialmedia {
+    display: none;
+  }
+
+  .themesbtn {
+    margin-right: -30%;
+  }
+} 

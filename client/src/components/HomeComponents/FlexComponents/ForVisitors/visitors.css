@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+
+  .dofah231{  
+    background-color: #5183b8;
+    color: whitesmoke;
+    padding: 50px;
+  }
+
+  .dofah231 h2{
+    font-size: 1.6rem;
+  }
+
+  .dofah231 h3{
+    font-size: 1.1rem;
+  }
+
+  .dofaul30{
+    font-size: 1.4rem;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .dofaul31{
+    padding: 50px;
+  }
+
+  .dofaul31 li{
+    font-size: 1.3rem;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  
+
+  

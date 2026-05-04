@@ -1,0 +1,78 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.notice-section{
+  padding: 10px;
+}
+
+.announcement-container {
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  max-height: 550px;  /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.announcement-container span {
+  color: red;
+}
+
+.announcement-container h1 {
+  color: black;
+}
+
+.announcement1 {
+  padding: 0px;
+  box-shadow: 0px 4px 8px rgba(243, 240, 240, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.notice-box a {
+  text-decoration: none;  /* Removes underline from links */
+  color: inherit;  /* Inherits color from parent so it doesn't default to blue */
+}
+.pNotice {
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+}
+
+.timestamp {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+
+.notice-button {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notice-button:hover {
+  background-color: #cf7916;
+}
+
+@media screen and (max-width: 425px) and (min-width:320px){
+  .announcement-container{
+    width: 100%;
+  }
+}

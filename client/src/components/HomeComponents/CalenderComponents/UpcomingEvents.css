@@ -1,0 +1,48 @@
+.upcoming-events-container {
+    margin-top: 4%;
+    width: 20%;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 15px;
+    height: 500px;
+  }
+  
+  .upcoming-events-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .upcoming-events-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .upcoming-events-container li {
+
+    margin-bottom: 20px;
+  }
+  
+  .upcoming-events-container a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .upcoming-events-container a:hover {
+    text-decoration: none;
+  
+  }
+  .upcoming-events-container li:hover {
+    color:black;
+    background-color: #91caff;
+
+  }
+
+  @media screen and (max-width: 425px) and (min-width:320px){
+    .upcoming-events-container {
+      width: 100%;
+      height: 450px;
+    }
+  }
+  

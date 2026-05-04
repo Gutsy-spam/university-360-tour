@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.dept-prog{
+  width: 100%;
+  display: flex;
+}
+
+.dept-programmes {
+  background-color: #5183b8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.dept-programmes img {
+  width: 100%;
+}
+
+.dept-programmes h2{
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+
+.dept-dropdown {
+
+  padding: 10px; /* Add padding inside the ul element */
+  list-style-type: none; /* Remove default bullet points */
+  background-color: #5183b8;
+  color: white;
+}
+
+.dept-dropdown li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #5183b8;
+  color: white;
+  border: 1px solid #718796; /* Add a border around each li element */
+  padding: 10px 10px; /* Add padding inside each li element */
+  margin: 5px 0; /* Add margin between li elements */
+}
+
+.dept-dropdown li:hover {
+  color: black;
+  border-color: black;
+}
+
+.read-more-button {
+  float: right;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more-button:hover {
+  background-color: #b39200;
+}

@@ -1,0 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+  }
+
+ 
+  .event-calendar-container {
+   width: 600px; /* Adjust the width as per your requirement */
+    margin: 0 auto; /* To center align the calendar */
+    /* ... Your other styles ... */
+  }
+  
+  .fc {
+    max-width: 100%; /* Ensure the calendar doesn't overflow its parent */
+    height: 550px; 
+    margin: 0 auto; 
+  }
+
+  @media screen and (max-width: 425px) and (min-width:320px){
+    .event-calendar-container {
+      width: 300px; 
+       margin: 0 auto; 
+     }
+  }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>University of Jammu 360 Tour</title>
+
+    <!-- Pannellum -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+
+    <style>
+        body { margin: 0; }
+
+        #panorama {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 9999;
+        }
+
+        /* Buttons */
+        .controls {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 9999;
+        }
+
+        .btn {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #00c3ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    🎓 Jammu University Virtual Tour
+</div>
+
+<div class="controls">
+    <div class="btn" onclick="goBack()">⬅ Back</div>
+    <div class="btn" onclick="goHome()">🏠 Home</div>
+</div>
+
+<div id="panorama"></div>
+
+<script>
+let historyStack = [];
+
+window.viewer = pannellum.viewer('panorama', {
+
+    "default": {
+        "firstScene": "prefab",
+        "autoLoad": true,
+        "hfov": 110,
+        "pitch": 0,
+        "yaw": 180,
+        "autoRotate": -2,
+        "showZoomCtrl": true
+    },
+
+    "scenes": {
+
+        "prefab": {
+            "title": "Outside View",
+            "panorama": "images/prefab.jpg",
+            "yaw": 0,
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "➡ Enter classroom",
+                    "sceneId": "classroom"
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": "⬅ Go to Library",
+                    "sceneId": "library"
+                }
+            ]
+        },
+
+        "library": {
+            "title": "Library",
+            "panorama": "images/lib.jpg",
+            "yaw": 180,
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "➡ Go to Lab",
+                    "sceneId": "lab"
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": "⬅ Go Outside",
+                    "sceneId": "prefab"
+                }
+            ]
+        },
+
+        "lab": {
+            "title": "Computer Lab",
+            "panorama": "images/lab.jpg",
+            "yaw": 90,
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "⬅ Back to Library",
+                    "sceneId": "library"
+                }
+            ]
+        },
+
+        "classroom": {
+            "title": "Classroom View",
+            "panorama": "images/classroom.jpg",
+            "yaw": 180,
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "⬅ Back to Library",
+                    "sceneId": "library"
+                }
+            ]
+        }
+
+    }
+});
+
+
+// 🔥 Track history
+viewer.on('scenechange', function(sceneId) {
+    historyStack.push(sceneId);
+});
+
+// 🔙 Back button
+function goBack() {
+    if (historyStack.length > 1) {
+        historyStack.pop(); // current
+        const prev = historyStack.pop(); // previous
+        viewer.loadScene(prev);
+    }
+}
+
+// 🏠 Home button
+function goHome() {
+    viewer.loadScene('prefab');
+}
+</script>
+
+</body>
+</html>

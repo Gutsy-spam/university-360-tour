@@ -1,0 +1,65 @@
+/* Album and Image List Styles */
+.album-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .album-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .images-list {
+    margin-top: 40px;
+  }
+  
+  .album-list img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .album-list img:hover {
+    transform: scale(1.05); /* subtle scale effect on hover */
+  }
+  
+  /* Pagination Styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .pagination-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pagination-item {
+    margin: 0 5px;
+  }
+  
+  .AlbumPages {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .AlbumPages:hover {
+    background-color: #ddd;
+  }
+  
+  .AlbumPages .active  {
+    background-color: #007bff;
+    color: #fff;
+  }
+  

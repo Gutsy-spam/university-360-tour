@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400&family=Poppins:wght@200&family=Roboto:wght@100&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  margin-top: 0%;
+  padding: 0%;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.navbar li {
+  margin-top: 0%;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list li {
+  border: 10px solid transparent;
+  transition: border 0.3s ease;
+  font-weight: bold;
+  color: black; /* Text color is black */
+}
+
+.navbar-list li:hover {
+  background-color: #001d66; /* Background color changes to purple on hover */
+  color: white; /* Text color changes to white on hover */
+}
+
+/* Dropdown styles - You can customize this part as needed */
+.container {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 0%;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #f2f7fa;
+  z-index: 1;
+  padding: 10px; /* Adjust the padding as needed */
+  border-radius: 0 0 30px 30px; /* Adjust the radius to your liking */
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  flex: 1;
+  max-width: 250px;
+  margin: 15px;
+}
+
+.col ul li {
+  margin: -7px;
+}
+
+.p-3 {
+  text-align: center;
+  color: white;
+  padding: 5px;
+  background-color: #001d66;
+  border: 1px solid #ccc;
+}
+
+.container ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.container ul li {
+  padding: 0px 0px;
+  color: black;
+}
+
+.container ul:hover {
+  border: 2px solid #001d66;
+}
+
+.container ul li:hover {
+  color: #001d66;
+  background-color: #fff1b8;
+  padding: 0px 0px;
+}
+
+/* Hover styles for different navbar items - You can customize this part as needed */
+.navbar-item:hover .container {
+  display: block;
+  width: 64.2%;
+  margin-left: 18%;
+  padding: 0px 0px;
+  height: 505px;
+}
+
+.navbar-item1:hover .container {
+  display: block;
+  width: 27.5%;
+  margin-left: 37.7%;
+}
+
+.navbar-item2:hover .container {
+  display: block;
+  width: 27.3%;
+  margin-left: 47.1%;
+}
+
+.navbar-item3:hover .container {
+  display: block;
+  width: 24.5%;
+  margin-left: 56.7%;
+}
+
+.navbar-item4:hover .container {
+  display: block;
+  width: 15%;
+  margin-left: 66.40%;
+}
+
+
+@media screen and (max-width: 425px) and (min-width:320px){
+  .navbar{
+    display: none;
+  }
+  .hamburg{
+    display: block;
+  }
+}

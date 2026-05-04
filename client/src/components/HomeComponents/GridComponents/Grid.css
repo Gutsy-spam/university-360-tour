@@ -1,0 +1,156 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.grid01 {
+  background-color: #f2f7fa;
+  padding: 40px;
+}
+
+.square {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.content1 {
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.box0 {
+  background-color: #f2f7fa;
+  color: #4c4c4c;
+  height: 350px;
+  padding: 30px;
+}
+
+.box0 h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+}
+
+.box0 p {
+  color: #4c4c4c;
+}
+
+.box0 h3 a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4c4c4c;
+}
+
+.box0 h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.box10 {
+  width: 100%;
+  background-color: #5183b8;
+  color: white;
+  padding: 30px;
+}
+
+.box10 h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+}
+
+.box10 p {
+  color: whitesmoke;
+}
+
+.box10 h3 a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.box10 h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .grid01 {
+    background-color: #f2f7fa;
+    padding: 0px;
+  }
+
+  .title{
+    padding: 5%;
+  }
+
+  .square {
+    display: grid;
+    padding: 0px;
+  }
+
+  .content1 {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .content1 h2{
+    margin-top: 15%;
+  }
+
+  .box0 {
+    height: 50px;
+    padding: 5px;
+  }
+
+  .box0 h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
+  }
+
+  .box10 {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .box10 h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
+  }
+
+  .square p{
+    display: none;
+  }
+
+  .square h3{
+    display: none;
+  }
+  
+}

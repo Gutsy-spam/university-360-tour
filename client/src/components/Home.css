@@ -1,0 +1,125 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.wrapper {
+  background-color: #f2f7fa;
+  width: 90%;
+  margin: auto;
+}
+
+.mobile{
+  display: none;
+}
+
+
+/* Media query for mobile devices with a viewport width 372px */
+@media screen and (max-width: 425px) and (min-width:320px) {
+  .wrapper {
+    width: 372px; /* Adjust width for mobile screens */
+    overflow: hidden;
+  }
+  .body{
+    overflow: hidden;
+  }
+  .footer{
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width:320px){
+  .sec {
+    display: none;
+  }
+  .feed{
+    display: none;
+  }
+
+  .academic{
+    width: 100%;
+  }
+
+  .four{
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  .mobile{
+    display: block;
+  }
+
+  .body{
+    flex-direction: column;
+  }
+
+  .five{
+    flex-direction: column;
+  }
+
+  .five-m{
+    padding: 4%;
+    overflow-x: auto;
+  }
+  .magzine {
+    display: none;
+  }
+
+  .five-one{
+    flex-direction: column;
+  }
+  .media{
+    width: 50%;
+  }
+}
+
+.body {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+.imageslider1 {
+  flex: 1; /* Distribute remaining space equally among child elements */
+  position: relative;
+}
+
+.feed {
+  width: 30%;
+}
+
+.sec {
+  width: 30%;
+  position: relative;
+}
+
+.academic {
+  display: flex;
+}
+
+.four {
+  padding: 5%;
+  display: flex;
+}
+
+.five {
+  background-color: #5183b8;
+  display: flex;
+}
+
+.five-one {
+  display: flex;
+  background-color: white;
+}
+
+.media {
+  width: 100%;
+}
+
+.magzine {
+  width: 35%;
+}

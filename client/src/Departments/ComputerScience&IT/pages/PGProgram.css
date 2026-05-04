@@ -1,0 +1,37 @@
+/* pgProgramPage.css */
+.pg-program-page {
+    max-width: 800px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.pg-program-page h2 {
+    
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pg-program-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pg-program-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pg-program-list h3 {
+    margin-top: 0;
+}
+
+.pg-program-list p {
+    margin: 10px 0 0;
+}

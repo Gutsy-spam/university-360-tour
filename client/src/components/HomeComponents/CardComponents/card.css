@@ -1,0 +1,17 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+.b {
+  display: flex;
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 425px) and (min-width:320px) {
+  .b {
+    display: block;
+}
+}

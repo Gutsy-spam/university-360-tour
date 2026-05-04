@@ -1,0 +1,53 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+  }
+
+  .cardbody2 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .button-360 {
+    background-color: #f6f9ff;
+    color: #1677ff; /* Blue text color */
+    padding: 50px 50px;
+    border: 1px solid black; /* Blue outline color */
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Center the text within the button */
+  .button-360::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  
+  .button-360 img {
+    width: 100px;
+  }
+  
+  .button-360 span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* Hover styles */
+  .button-360:hover {
+    background-color: #1677ff; /* Blue background color */
+  }
+
+  @media screen and (max-width: 425px) and (min-width:320px) {
+    .cardbody2 {
+      display: none;
+  }
+  }

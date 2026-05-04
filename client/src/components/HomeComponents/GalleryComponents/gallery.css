@@ -1,0 +1,60 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+  }
+
+  .gallery-section {
+    padding: 40px;
+    width: 100%;
+  }
+
+  .gallery-heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    gap: 5px; /* Spacing between grid items */
+    width: 300px; /* Set a maximum width for the grid */
+  }
+  
+  /* Style the grid items */
+  .grid-item1 {
+    width: 250px;
+    height: 180px; /* Set the height of your small box */
+    overflow: hidden; /* Ensure the image doesn't overflow the box */
+    background-color: #f0f0f0;
+    padding: 0px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+ 
+  .grid-item1 img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  
+  @media screen and (max-width: 425px) and (min-width:320px){
+    .grid-container1{
+      width: 90%;
+      margin: auto;
+    }
+
+    .grid-item1{
+      width: 100%;
+      height: 100%;
+    }
+
+    .gallery-section {
+      padding: 0px;
+    }
+  }

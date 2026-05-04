@@ -1,0 +1,112 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.items-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%; /* ensures it takes up full width */
+}
+.item-card {
+  box-sizing: border-box;
+  width: 350px;
+  height: 32rem;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* This will center everything horizontally */
+}
+
+.item-image {
+  max-width: 100%; /* Ensures the image doesn't go beyond the card's width */
+  height: auto; /* Makes sure the image retains its aspect ratio */
+  margin-bottom: 10px; /* Adds some space below the image */
+}
+.pa {
+  text-align: center;
+  margin-top: 10px;
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* For the gradient */
+}
+
+.pa:after {
+  content: ""; /* This is necessary for the before to work */
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2em; /* The height of the gradient */
+  background: linear-gradient(transparent, white); /* Fading effect */
+}
+
+.item-link {
+  margin-top: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+.arrow1 i{
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.left-arrow1,
+.right-arrow1 {
+  display: inline-block;
+  width: 30px; /* ensures the arrow doesn't collapse */
+}
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.btR {
+  display: block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btR:hover {
+  background-color: #0056b3;
+  color: whitesmoke;
+}

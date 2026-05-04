@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.dept-about {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between
+}
+
+.card-one {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.card-one h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-one p {
+  padding: 10px;
+  width: 90%;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.read-more-one {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.read-more-one:hover {
+  background-color: #006d75;
+}
+
+.card-two {
+  float: right;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.card-two h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-two p {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.dept-head {
+    cursor: pointer;
+  float: right;
+  color: #002766;
+  font-size: 1.4rem;
+}
+
+.dept-message {
+  display: flex;
+}
+
+.dept-message img {
+  width: 30%;
+}
+
+.read-more-two {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.read-more-two:hover {
+  background-color: #006d75;
+}

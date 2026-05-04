@@ -1,0 +1,164 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+.grid31 {
+  background-color: #f2f7fa;
+  padding: 40px;
+}
+
+.paragraph p{
+    width: 85%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.square31 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.content31 {
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.box31 {
+  background-color: #f2f7fa;
+  color: #4c4c4c;
+  height: 350px;
+  padding: 30px;
+}
+
+.box31 h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+}
+
+.box31 p {
+  color: #4c4c4c;
+}
+
+.box31 h3 a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4c4c4c;
+}
+
+.box31 h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.box103 {
+  width: 100%;
+  background-color: #5183b8;
+  color: white;
+  padding: 30px;
+}
+
+.box103 h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+}
+
+.box103 p {
+  color: whitesmoke;
+}
+
+.box103 h3 a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.box103 h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .grid31 {
+    width: 100%;
+    background-color: #f2f7fa;
+    padding: 3%;
+  }
+
+  .square31 {
+    width: 100%;
+    display: grid;
+    padding: 10px;
+  }
+
+  .content31 {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .content31 h2 {
+    margin-top: 15%;
+  }
+
+  .box31 {
+    height: 150px;
+    padding: 5px;
+  }
+
+  .box31 h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
+  }
+
+  .box103 {
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .box103 h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
+  }
+
+  .square31{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .square31 p {
+    display: none;
+  }
+
+  .square31 h3 {
+    display: none;
+  }
+}

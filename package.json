@@ -1,0 +1,39 @@
+{
+  "proxy": "http://localhost:5000/",
+  "name": "university-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "jwt-decode": "^3.1.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
+    "panolens": "^0.10.4",
+    "react-360-image": "^0.1.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-is": "^18.2.0",
+    "react-simple-chatbot": "^0.5.3",
+    "react-slick": "^0.29.0",
+    "react-twitter-embed": "^4.0.4",
+    "react-youtube": "^10.1.0",
+    "three": "^0.154.0",
+    "yet-another-react-lightbox": "^3.12.2"
+  }
+}

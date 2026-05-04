@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+
+
+
+.dept-image-slider1 {
+  width: 100%;
+  position: relative;  
+  overflow: hidden;  
+}
+
+.dept-image-slider1 img {
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 60vh;
+  background-color: rgba(
+    35,
+    92,
+    158,
+    0.8
+  ); /* Semi-transparent black background */
+  z-index: 1; /* Place the overlay above other content */
+}
+
+.notice {
+  width: 30%;
+ 
+}
+
+.main-box {
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  height: 550px;
+}
+
+.main-box h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffc53d;
+}
+
+.main-box ul {
+  padding: 20px;
+}
+
+.main-box ul li {
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.main-box span {
+  text-align: center;
+  color: #fff566;
+}
+
+/* Style the "Read All" button */
+.read-all-button {
+  margin-left: 70%;
+ 
+  background-color: #0b507e;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 0px;
+  transition: border-color 0.3s ease, color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.read-all-button:hover {
+  background-color: #004574;
+  color: yellow;
+  border-color: yellow;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .dept-image-slider1 {
+    width: 100%;
+    height: 200px;
+  }
+
+  .dept-image-slider1 img {
+    height: 200px;
+  }
+}

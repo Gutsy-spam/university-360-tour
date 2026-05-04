@@ -1,0 +1,21 @@
+export { default as Botany } from './botany';
+export { default as Zoology } from './Zoology';
+export { default as LAW } from './Law';
+export { default as Urdu } from './Urdu';
+export { default as Physics } from './Physics';
+export { default as Sociology } from './Sociology';
+export { default as RemoteSensingGIS } from './RemoteSensingGIS';
+export { default as SHTM } from './Shtm';
+export { default as Biotechnology } from './Biotechnology';
+export { default as HomeScience } from './HomeScience';
+export { default as StrategicRegionalStudies } from './StrategicRegionalStudies';
+export { default as Geology } from './Geology';
+export { default as Chemistry } from './Chemistry';
+export { default as Commerce } from './Commerce';
+export { default as LCentreForStudiesInMuseologyAW } from './CentreForStudiesInMuseology';
+export { default as EnvironmentalSciences } from './EnvironmentalSciences';
+export { default as TheBusinessSchool } from './TheBusinessSchool';
+export { default as Hindi } from './Hindi';
+export { default as Psychology } from './Psychology';
+export { default as Mathematics } from './Mathematics';
+// Repeat the same for other subjects

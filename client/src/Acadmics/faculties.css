@@ -1,0 +1,55 @@
+/* faculties.css */
+
+/* Reset styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+  }
+  
+  /* Main container styles */
+  .dept-faculties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Faculty section styles */
+  .faculty1 {
+    width: calc(50% - 20px); /* Two sections in one row with spacing */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .faculty1 h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .faculty1 ul {
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .faculty1 ul li {
+    margin-bottom: 5px;
+  }
+  
+  .faculty1 ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .faculty1 ul li a:hover {
+    color: #f7981c;
+  }
+  
