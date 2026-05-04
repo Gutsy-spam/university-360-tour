@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './convocation.css';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+
 
 const Convocation = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -50,16 +49,6 @@ const Convocation = () => {
       <div className="gallery">
         <p className="gallery-link" onClick={() => openLightbox(0)}>Photo Gallery (Click to see Images...)</p>
       </div>
-      {isLightboxOpen && (
-        <Lightbox
-          mainSrc={images[currentImageIndex]}
-          nextSrc={images[(currentImageIndex + 1) % images.length]}
-          prevSrc={images[(currentImageIndex + images.length - 1) % images.length]}
-          onCloseRequest={closeLightbox}
-          onMovePrevRequest={() => setCurrentImageIndex((currentImageIndex + images.length - 1) % images.length)}
-          onMoveNextRequest={() => setCurrentImageIndex((currentImageIndex + 1) % images.length)}
-        />
-      )}
 
       {/* Embed YouTube videos */}
       <div className="youtube-videos">
