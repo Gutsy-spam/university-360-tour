@@ -193,25 +193,8 @@ import Vision from "./Innovation&Development/QualityAssurance/Vision/Vision";
   return null;
 }
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-      const timer = setTimeout(() => {
-          setIsLoading(false);
-      }, 3000);  // 3seconds
-
-      return () => clearTimeout(timer);
-  }, []);
-  if (isLoading) {
-    return (
-      <div className="preloader">
-        <img src="/assets/preloader.gif" alt="Loading..." />
-        <button onClick={() => setIsLoading(false)} className="skip-button">
-            Skip
-        </button>
-      </div>
-    );
-  }
+  
   return (
     <>
       <Router>

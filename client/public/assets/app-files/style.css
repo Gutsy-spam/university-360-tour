@@ -842,4 +842,40 @@ body.view-control-buttons .viewControlButton {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}/* =========================================
+   UNIVERSITY OF JAMMU COLOR THEME
+   ========================================= */
+
+:root {
+    --navy: #000080;
+    --navy-mid: #0a0a9a;
+    --navy-lt: #1a1ab5;
+    --sky: #e8f0ff;
+    --bg: #F3FDFE;
+    --gold: #c8a84b;
+    --crimson: #8b1a1a;
+    --white: #ffffff;
+    --text: #1a1a2e;
+    --muted: #5a6480;
+    --border: #c5d5f0;
+}/* TOP TITLE BAR */
+#titleBar .sceneName {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}/* LEFT SCENE MENU */
+#sceneList .scenes {
+    background-color: var(--navy) !important;
+}
+
+#sceneList .scene {
+    color: var(--white) !important;
+}
+
+#sceneList .scene .text {
+    color: var(--white) !important;
+}
+
+#sceneList .scene.current,
+.no-touch #sceneList .scene:hover {
+    background-color: var(--navy-mid) !important;
 }

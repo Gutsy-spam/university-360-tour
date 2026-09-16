@@ -9,47 +9,331 @@
     <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
 
     <style>
-        body { margin: 0; }
 
-        #panorama {
-            width: 100vw;
-            height: 100vh;
-        }
+    :root {
+        --navy: #000080;
+        --navy-mid: #0a0a9a;
+        --navy-lt: #1a1ab5;
+        --sky: #e8f0ff;
+        --bg: #F3FDFE;
+        --gold: #c8a84b;
+        --crimson: #8b1a1a;
+        --white: #ffffff;
+        --text: #1a1a2e;
+        --muted: #5a6480;
+        --border: #c5d5f0;
+    }
 
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            z-index: 9999;
-        }
 
-        /* Buttons */
-        .controls {
-            position: fixed;
-            top: 60px;
-            left: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 9999;
-        }
+    /* =========================
+       PAGE
+       ========================= */
 
-        .btn {
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+    }
 
-        .btn:hover {
-            background: #00c3ff;
-        }
-    </style>
+
+    #panorama {
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    /* =========================
+       TOP NAVBAR
+       ========================= */
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        color: var(--white);
+        text-align: center;
+        padding: 10px;
+        z-index: 9999;
+        border-bottom: 2px solid var(--gold);
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       BACK + HOME
+       ========================= */
+
+    .controls {
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 9999;
+    }
+
+
+    .btn {
+        background: var(--navy);
+        color: var(--white);
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid var(--gold);
+        font-weight: bold;
+        transition: 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .btn:hover {
+        background: var(--navy-mid);
+        border-color: var(--gold);
+        transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       PANNELLUM CONTROLS
+       ========================= */
+
+    .pnlm-controls-container {
+        z-index: 9998;
+    }
+
+
+    .pnlm-control {
+        background-color: var(--navy) !important;
+        border: 1px solid var(--gold) !important;
+    }
+
+
+    .pnlm-control:hover {
+        background-color: var(--navy-mid) !important;
+    }
+
+
+    .pnlm-zoom-controls {
+        border: 1px solid var(--gold);
+    }
+
+
+    .pnlm-fullscreen-toggle {
+        background-color: var(--navy) !important;
+        border: 1px solid var(--gold) !important;
+    }
+
+
+    /* =========================
+       HOTSPOTS
+       ========================= */
+
+    .pnlm-hotspot {
+        background-color: var(--navy);
+        border: 2px solid var(--gold);
+    }
+/* =========================
+   BOTTOM 360 CONTROLS
+   ========================= */
+
+
+.pnlm-compass {
+    display: none !important;
+}.pnlm-compass {
+    display: none !important;
+}
+
+.pnlm-zoom-controls,
+.pnlm-fullscreen-toggle {
+    display: none !important;
+}/* =========================
+   CUSTOM TOUR CONTROLS
+   ========================= */
+
+.tour-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 6px;
+
+    padding: 6px;
+
+    background: rgba(0, 0, 128, 0.92);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+
+    z-index: 9999;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.tour-controls button {
+    width: 48px;
+    height: 48px;
+
+    background: var(--navy);
+    color: var(--white);
+
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.tour-controls button:hover {
+    background: var(--navy-mid);
+    border-color: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.tour-controls button:active {
+    transform: scale(0.95);
+}/* =========================================
+   EXPLORE AREAS MENU
+   ========================================= */
+
+#exploreMenu {
+    position: fixed;
+    top: 60px;
+    left: 15px;
+    width: 300px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+
+    background: rgba(0, 0, 80, 0.96);
+    border: 2px solid var(--gold);
+    border-radius: 15px;
+
+    z-index: 10000;
+    padding: 8px;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu heading */
+.explore-title {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    margin-bottom: 3px;
+}
+
+/* Individual menu item */
+.explore-item {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 58px;
+
+    box-sizing: border-box;
+    padding: 5px;
+
+    text-decoration: none;
+    color: var(--white);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
+
+/* Thumbnail */
+.explore-item img {
+    width: 58px;
+    height: 45px;
+
+    object-fit: cover;
+
+    margin-right: 10px;
+
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+
+    flex-shrink: 0;
+}
+
+/* Location name */
+.explore-item span {
+    flex: 1;
+
+    color: var(--white);
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Arrow */
+.explore-item b {
+    color: var(--white);
+
+    font-size: 30px;
+    font-weight: normal;
+
+    padding-right: 5px;
+}
+
+/* Hover */
+.explore-item:hover {
+    background: var(--navy-mid);
+}
+
+.explore-item:hover span,
+.explore-item:hover b {
+    color: var(--gold);
+}
+
+/* Scrollbar */
+#exploreMenu::-webkit-scrollbar {
+    width: 8px;
+}
+
+#exploreMenu::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 5px;
+}
+
+#exploreMenu::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #exploreMenu {
+        width: 260px;
+        left: 8px;
+        top: 55px;
+    }
+
+    .explore-item img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .explore-item span {
+        font-size: 14px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -64,11 +348,74 @@
 </div>
 
 <div id="panorama"></div>
+<<button id="exploreToggle" onclick="toggleExploreMenu()" title="Show/Hide Explore Areas">
+    ◀☰
+</button>
+<!-- Explore Areas Menu -->
+<div id="exploreMenu">
+    <div class="explore-title">📍 Explore Areas</div>
 
+    <div class="explore-item" onclick="viewer.loadScene('prefab')">
+        <img src="images/prefab.jpg">
+        <span>Outside View</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('library')">
+        <img src="images/lib.jpg">
+        <span>Library</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('lab')">
+        <img src="images/lab.jpg">
+        <span>Computer Lab 1</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('lab2')">
+        <img src="images/lab-2.jpeg">
+        <span>Computer Lab 2</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('classroom')">
+        <img src="images/classroom.jpg">
+        <span>Classroom</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('conference')">
+        <img src="images/confrence-room.jpg">
+        <span>Conference Room</span>
+        <b>›</b>
+    </div>
+
+    <a class="explore-item" href="/assets/app-files/index.html">
+        <img src="images/prefab.jpg">
+        <span>Design Your Degree</span>
+        <b>›</b>
+    </a>
+</div>
+<!-- Custom 360 Controls -->
+<div class="tour-controls">
+
+    <button onclick="moveUp()" title="Look Up">↑</button>
+    <button onclick="moveDown()" title="Look Down">↓</button>
+
+    <button onclick="moveLeft()" title="Look Left">←</button>
+    <button onclick="moveRight()" title="Look Right">→</button>
+
+    <button onclick="zoomIn()" title="Zoom In">+</button>
+    <button onclick="zoomOut()" title="Zoom Out">−</button>
+
+    <button onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
+
+</div>
 <script>
 let historyStack = [];
 
-window.viewer = pannellum.viewer('panorama', {
+const viewer = pannellum.viewer('panorama', {
 
     "default": {
         "firstScene": "prefab",
@@ -82,75 +429,242 @@ window.viewer = pannellum.viewer('panorama', {
 
     "scenes": {
 
+        /* =========================
+           OUTSIDE
+           ========================= */
+
         "prefab": {
             "title": "Outside View",
             "panorama": "images/prefab.jpg",
             "yaw": 0,
+
             "hotSpots": [
+
+                /* Conference Room - ground floor door */
+                {
+                    "pitch": 2,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": " Conference Room",
+                    "sceneId": "conference"
+                },
+
+                /* Lab - first floor window */
+                {
+                    "pitch": 10,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": " Lab",
+                    "sceneId": "lab"
+                },
+
+                /* Lab 2 - near AC */
+                {
+                    "pitch": 25,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": " Lab 2",
+                    "sceneId": "lab2"
+                },
+
+                /* Classroom */
                 {
                     "pitch": 0,
                     "yaw": 0,
                     "type": "scene",
-                    "text": "➡ Enter classroom",
+                    "text": " Enter Classroom",
                     "sceneId": "classroom"
                 },
+
+                /* Library */
                 {
                     "pitch": 0,
-                    "yaw": 90,
+                    "yaw": 70,
                     "type": "scene",
-                    "text": "⬅ Go to Library",
+                    "text": " Go to Library",
                     "sceneId": "library"
                 }
             ]
         },
+
+
+        /* =========================
+           LIBRARY
+           ========================= */
 
         "library": {
             "title": "Library",
             "panorama": "images/lib.jpg",
             "yaw": 180,
+
             "hotSpots": [
+
                 {
                     "pitch": 0,
                     "yaw": 0,
                     "type": "scene",
-                    "text": "➡ Go to Lab",
+                    "text": " Go to Lab",
                     "sceneId": "lab"
                 },
+
+                {
+                    "pitch": 0,
+                    "yaw": -90,
+                    "type": "scene",
+                    "text": " Go to Lab 2",
+                    "sceneId": "lab2"
+                },
+
                 {
                     "pitch": 0,
                     "yaw": 90,
                     "type": "scene",
-                    "text": "⬅ Go Outside",
+                    "text": " Go Outside",
                     "sceneId": "prefab"
+                },
+
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": " Go to Classroom",
+                    "sceneId": "classroom"
                 }
             ]
         },
+
+
+        /* =========================
+           LAB
+           ========================= */
 
         "lab": {
             "title": "Computer Lab",
             "panorama": "images/lab.jpg",
             "yaw": 90,
+
             "hotSpots": [
+
+                /* Library */
                 {
                     "pitch": 2,
                     "yaw": -10,
                     "type": "scene",
-                    "text": "⬅ Back to Library",
+                    "text": " Library",
                     "sceneId": "library"
+                },
+
+                /* Direct Outside */
+                {
+                    "pitch": 0,
+                    "yaw": 240,
+                    "type": "scene",
+                    "text": " Outside",
+                    "sceneId": "prefab"
+                },
+
+                /* Lab 2 */
+                {
+                    "pitch": 0,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": " Lab 2",
+                    "sceneId": "lab2"
                 }
             ]
         },
+
+
+        /* =========================
+           LAB 2
+           ========================= */
+
+        "lab2": {
+            "title": "Computer Lab 2",
+            "panorama": "images/lab-2.jpeg",
+            "yaw": 90,
+
+            "hotSpots": [
+
+                /* Back to Lab */
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": " Lab",
+                    "sceneId": "lab"
+                },
+
+                /* Direct Outside */
+                {
+                    "pitch": 0,
+                    "yaw": -90,
+                    "type": "scene",
+                    "text": " Outside",
+                    "sceneId": "prefab"
+                }
+            ]
+        },
+
+
+        /* =========================
+           CLASSROOM
+           ========================= */
 
         "classroom": {
             "title": "Classroom View",
             "panorama": "images/classroom.jpg",
             "yaw": 180,
+
             "hotSpots": [
+
+                /* Direct Outside */
+                {
+                    "pitch": 0,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": " Outside",
+                    "sceneId": "prefab"
+                },
+
+                /* Library */
                 {
                     "pitch": 0,
                     "yaw": 0,
                     "type": "scene",
-                    "text": "⬅ Back to Library",
+                    "text": " Library",
+                    "sceneId": "library"
+                }
+            ]
+        },
+
+
+        /* =========================
+           CONFERENCE ROOM
+           ========================= */
+
+        "conference": {
+            "title": "Conference Room",
+            "panorama": "images/confrence-room.jpg",
+            "yaw": 180,
+
+            "hotSpots": [
+
+                /* Direct Outside */
+                {
+                    "pitch": 0,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": " Outside",
+                    "sceneId": "prefab"
+                },
+
+                /* Library */
+                {
+                    "pitch": 0,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": " Library",
                     "sceneId": "library"
                 }
             ]
@@ -160,23 +674,70 @@ window.viewer = pannellum.viewer('panorama', {
 });
 
 
-// 🔥 Track history
+/* =========================
+   HISTORY
+   ========================= */
+
 viewer.on('scenechange', function(sceneId) {
     historyStack.push(sceneId);
 });
 
-// 🔙 Back button
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
 function goBack() {
+
     if (historyStack.length > 1) {
-        historyStack.pop(); // current
-        const prev = historyStack.pop(); // previous
-        viewer.loadScene(prev);
+
+        historyStack.pop();
+
+        const previousScene = historyStack.pop();
+
+        viewer.loadScene(previousScene);
     }
 }
 
-// 🏠 Home button
+
+/* =========================
+   HOME BUTTON
+   ========================= */
+
 function goHome() {
-    viewer.loadScene('prefab');
+    window.location.href = "/Home";
+}/* =========================
+   CUSTOM TOUR CONTROLS
+   ========================= */
+function toggleExploreMenu() {
+    document.getElementById("exploreMenu").classList.toggle("closed");
+}
+function moveUp() {
+    viewer.setPitch(viewer.getPitch() + 10);
+}
+
+function moveDown() {
+    viewer.setPitch(viewer.getPitch() - 10);
+}
+
+function moveLeft() {
+    viewer.setYaw(viewer.getYaw() - 15);
+}
+
+function moveRight() {
+    viewer.setYaw(viewer.getYaw() + 15);
+}
+
+function zoomIn() {
+    viewer.setHfov(Math.max(30, viewer.getHfov() - 10));
+}
+
+function zoomOut() {
+    viewer.setHfov(Math.min(120, viewer.getHfov() + 10));
+}
+
+function toggleFullscreen() {
+    viewer.toggleFullscreen();
 }
 </script>
 
