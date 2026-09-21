@@ -332,6 +332,29 @@
     .explore-item span {
         font-size: 14px;
     }
+}/* Explore Areas Hide / Show Button */
+#exploreToggle {
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 40px;
+    background: var(--navy);
+    color: var(--white);
+    border: 2px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide Explore Areas */
+#exploreMenu.closed {
+    display: none;
 }
 </style>
 </head>
@@ -348,7 +371,7 @@
 </div>
 
 <div id="panorama"></div>
-<<button id="exploreToggle" onclick="toggleExploreMenu()" title="Show/Hide Explore Areas">
+<button id="exploreToggle" onclick="toggleExploreMenu()" title="Show/Hide Explore Areas">
     ◀☰
 </button>
 <!-- Explore Areas Menu -->
@@ -390,13 +413,26 @@
         <span>Conference Room</span>
         <b>›</b>
     </div>
+    
+    <div class="explore-item" onclick="viewer.loadScene('3d_lab')">
+        <img src="images/3d_lab.jpeg">
+        <span>3D Lab</span>
+        <b>›</b>
+    </div>
+
+    <div class="explore-item" onclick="viewer.loadScene('Server_Room')">
+        <img src="images/Server_room.jpeg">
+        <span>Server Room</span>
+        <b>›</b>
+    </div>
 
     <a class="explore-item" href="/assets/app-files/index.html">
         <img src="images/prefab.jpg">
-        <span>Design Your Degree</span>
+        <span>Back</span>
         <b>›</b>
     </a>
 </div>
+
 <!-- Custom 360 Controls -->
 <div class="tour-controls">
 
@@ -483,8 +519,16 @@ const viewer = pannellum.viewer('panorama', {
                     "type": "scene",
                     "text": " Go to Library",
                     "sceneId": "library"
+                },
+                {
+                    "pitch": 10,
+                    "yaw": 63,
+                    "type": "scene",
+                    "text": " Go to 3D Lab",
+                    "sceneId": "3d_lab"
                 }
             ]
+            
         },
 
 
@@ -525,10 +569,10 @@ const viewer = pannellum.viewer('panorama', {
 
                 {
                     "pitch": 0,
-                    "yaw": 180,
+                    "yaw": 140,
                     "type": "scene",
-                    "text": " Go to Classroom",
-                    "sceneId": "classroom"
+                    "text": " Go to Server Room",
+                    "sceneId": "Server_Room"
                 }
             ]
         },
@@ -603,6 +647,7 @@ const viewer = pannellum.viewer('panorama', {
                     "text": " Outside",
                     "sceneId": "prefab"
                 }
+
             ]
         },
 
@@ -668,11 +713,71 @@ const viewer = pannellum.viewer('panorama', {
                     "sceneId": "library"
                 }
             ]
-        }
+        },
 
+        "3d_lab": {
+            "title": "3D Lab",
+            "panorama": "images/3d_lab.jpeg",
+            "yaw": 180,
+
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Outside",
+                    "sceneId": "prefab"
+                },
+
+                {
+                    "pitch": 0,
+                    "yaw": -60,
+                    "type": "scene",
+                    "text": "Library",
+                    "sceneId": "library"
+                },
+
+                {
+                    "pitch": 0,
+                    "yaw": -260,
+                    "type": "scene",
+                    "text": "Conference Room",
+                    "sceneId": "conference"
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": " Go to Server Room",
+                    "sceneId": "Server_Room"
+                }
+            ]
+        },
+        "Server_Room": {
+            "title": "Server Room",
+            "panorama": "images/Server_room.jpeg",
+            "yaw": 180,
+"hotSpots": [
+
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Library",
+                    "sceneId": "library"
+                },
+
+                {
+                    "pitch": 0,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "3d Lab",
+                    "sceneId": "3d_lab"
+                }
+            ]
     }
+}
 });
-
 
 /* =========================
    HISTORY
