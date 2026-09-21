@@ -446,7 +446,8 @@
     <button onclick="zoomOut()" title="Zoom Out">−</button>
 
     <button onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
-
+    <button onclick="nextScene()" title="Next Scene">→|</button>
+    <button onclick="toggleFullTour()" title="Full Tour">▶</button>
 </div>
 <script>
 let historyStack = [];
@@ -841,8 +842,121 @@ function zoomOut() {
     viewer.setHfov(Math.min(120, viewer.getHfov() + 10));
 }
 
-function toggleFullscreen() {
-    viewer.toggleFullscreen();
+let fullTourActive = false;
+let fullTourTimer = null;
+let fullTourRotation = 0;
+
+function nextScene() {
+    const sceneOrder = [
+        "prefab",
+        "3d_lab",
+        "library",
+        "lab",
+        "classroom",
+        "conference",
+        "Server_Room",
+        "lab2"
+    ];
+
+    const currentScene = viewer.getScene();
+    const currentIndex = sceneOrder.indexOf(currentScene);
+
+    if (currentIndex < sceneOrder.length - 1) {
+        viewer.loadScene(sceneOrder[currentIndex + 1]);
+    } else {
+        stopFullTour();
+    }
+}
+
+function toggleFullTour() {
+
+    if (fullTourActive) {
+        stopFullTour();
+    } else {
+        startFullTour();
+    }
+}
+
+function startFullTour() {
+
+    fullTourActive = true;
+
+    document.querySelector('.tour-controls button:last-child').innerText = "⏹";
+
+    const startYaw = viewer.getYaw();
+    const duration = 8000; // 8 seconds for one complete 360°
+    const startTime = performance.now();
+
+    function rotate(timestamp) {
+
+        if (!fullTourActive) {
+            return;
+        }
+
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        viewer.setYaw(startYaw + (360 * progress));
+
+        if (progress < 1) {
+
+            requestAnimationFrame(rotate);
+
+        } else {
+
+            // 360° completed
+            goToNextFullTourScene();
+        }
+    }
+
+    requestAnimationFrame(rotate);
+}
+function goToNextFullTourScene() {
+
+    const sceneOrder = [
+        "prefab",
+        "3d_lab",
+        "library",
+        "lab",
+        "classroom",
+        "conference",
+        "Server_Room",
+        "lab2"
+    ];
+
+    const currentScene = viewer.getScene();
+    const currentIndex = sceneOrder.indexOf(currentScene);
+
+    if (currentIndex === -1) {
+        stopFullTour();
+        return;
+    }
+
+    if (currentIndex >= sceneOrder.length - 1) {
+        stopFullTour();
+        return;
+    }
+
+    const nextSceneId = sceneOrder[currentIndex + 1];
+
+    viewer.loadScene(nextSceneId);
+
+    viewer.once('scenechange', function() {
+
+        if (fullTourActive) {
+            setTimeout(function() {
+                startFullTour();
+            }, 300);
+        }
+
+    });
+}
+
+function stopFullTour() {
+
+    fullTourActive = false;
+
+    document.querySelector('.tour-controls button:last-child').innerText = "▶";
 }
 </script>
 
